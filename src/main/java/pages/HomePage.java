@@ -10,8 +10,9 @@ public class HomePage extends Page {
 		driver.findElement(By.xpath("//a[contains(text(),'Free Sign Up')]")).click();
 	}
 
-	public void gotoLogin() {
+	public LoginPage gotoLogin() {
 		driver.findElement(By.xpath("//a[contains(text(),'Login')]")).click();
+		return new LoginPage();
 	}
 
 	public void gotoZOhoEdu() {

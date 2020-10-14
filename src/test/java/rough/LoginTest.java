@@ -1,5 +1,7 @@
 package rough;
 
+import CRM.Account.Pages.AccountsPage;
+import CRM.Account.Pages.CreateAccountPage;
 import base.Page;
 import pages.HomePage;
 import pages.LoginPage;
@@ -10,13 +12,16 @@ public class LoginTest {
 	public static void main(String[] args) {
 
 		HomePage homePage = new HomePage();
-		homePage.gotoLogin();
-		LoginPage loginPage = new LoginPage();
+		LoginPage lPage = homePage.gotoLogin();
 
-		loginPage.doLogin("leoalak@gmail.com", "Toma*1996");
-		zohoAppPage zohoAppPage = new zohoAppPage();
-		zohoAppPage.gotoCRM();
-		Page.menu.gotoAccounts();
+		zohoAppPage zPage = lPage.doLogin("leoalak@gmail.com", "Toma*1996");
+
+		zPage.gotoCRM();
+		AccountsPage accountsPage = Page.menu.gotoAccounts();
+
+		CreateAccountPage cPage = accountsPage.gotoCreateAccounts();
+
+		cPage.crateAccount("Alak1985");
 
 	}
 
