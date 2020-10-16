@@ -7,9 +7,9 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.zohoAppPage;
 
-public class LoginTest {
+public class roughLoginTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		HomePage homePage = new HomePage();
 		LoginPage lPage = homePage.gotoLogin();

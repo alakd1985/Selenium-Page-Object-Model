@@ -11,7 +11,7 @@ public class HomePage extends Page {
 	}
 
 	public LoginPage gotoLogin() {
-		driver.findElement(By.xpath("//a[contains(text(),'Login')]")).click();
+		click("loginlink_xpath");
 		return new LoginPage();
 	}
 
