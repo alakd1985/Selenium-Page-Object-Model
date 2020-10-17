@@ -111,7 +111,7 @@ public class Page {
 
 	// key word
 
-	public void click(String locator) {
+	public static void click(String locator) {
 		if (locator.endsWith("_css")) {
 			driver.findElement(By.cssSelector(or.getProperty(locator))).click();
 		} else if (locator.endsWith("_xpath")) {
@@ -161,7 +161,7 @@ public class Page {
 
 	// type Method
 
-	public void type(String locator, String value) {
+	public static void type(String locator, String value) {
 		if (locator.endsWith("_css")) {
 
 			driver.findElement(By.cssSelector(or.getProperty(locator))).sendKeys(value);
@@ -180,7 +180,7 @@ public class Page {
 
 	static WebElement dropdown;
 
-	public void select(String locator, String value) {
+	public static void select(String locator, String value) {
 		if (locator.endsWith("_css")) {
 			dropdown = driver.findElement(By.cssSelector(or.getProperty(locator)));
 		} else if (locator.endsWith("_xpath")) {

@@ -13,7 +13,7 @@ public class zohoAppPage extends Page {
 
 	public CRMHomePage gotoCRM() {
 
-		driver.findElement(By.xpath("//body/div[2]/div[1]/div[1]/div[7]/div[1]/a[1]/span[1]")).click();
+		click("crmlink_xpath");
 
 		return new CRMHomePage();
 	}

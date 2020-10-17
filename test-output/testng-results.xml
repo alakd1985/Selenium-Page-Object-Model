@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13856" started-at="2020-10-16T14:29:01 EDT" finished-at="2020-10-16T14:29:15 EDT">
+  <suite name="Page Object Model" duration-ms="25179" started-at="2020-10-16T20:56:22 EDT" finished-at="2020-10-16T20:56:47 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13856" started-at="2020-10-16T14:29:01 EDT" finished-at="2020-10-16T14:29:15 EDT">
+    <test name="Login Test" duration-ms="11219" started-at="2020-10-16T20:56:22 EDT" finished-at="2020-10-16T20:56:33 EDT">
       <class name="testcases.LoginTest">
-        <test-method status="PASS" signature="searchSomething(java.util.Hashtable)[pri:0, instance:testcases.LoginTest@167fdd33]" name="searchSomething" duration-ms="23" started-at="2020-10-16T14:29:15 EDT" data-provider="dp" finished-at="2020-10-16T14:29:15 EDT">
+        <test-method status="PASS" signature="loginTest(java.util.Hashtable)[pri:0, instance:testcases.LoginTest@b7f23d9]" name="loginTest" duration-ms="2526" started-at="2020-10-16T20:56:31 EDT" data-provider="dp" finished-at="2020-10-16T20:56:33 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{key=alak}]]>
+                <![CDATA[{password=Toma*1996, runmode=Y, username=leoalak@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchSomething -->
+        </test-method> <!-- loginTest -->
       </class> <!-- testcases.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Login Test -->
+    <test name="Create Account Test" duration-ms="13537" started-at="2020-10-16T20:56:34 EDT" finished-at="2020-10-16T20:56:47 EDT">
+      <class name="testcases.CreateAccountTest">
+        <test-method status="PASS" signature="createAccountTest(java.util.Hashtable)[pri:0, instance:testcases.CreateAccountTest@61009542]" name="createAccountTest" duration-ms="13525" started-at="2020-10-16T20:56:34 EDT" data-provider="dp" finished-at="2020-10-16T20:56:47 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{accountname=Alak}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccountTest -->
+      </class> <!-- testcases.CreateAccountTest -->
+    </test> <!-- Create Account Test -->
+  </suite> <!-- Page Object Model -->
 </testng-results>

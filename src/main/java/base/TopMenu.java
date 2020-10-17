@@ -1,6 +1,5 @@
 package base;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import CRM.Account.Pages.AccountsPage;
@@ -29,7 +28,7 @@ public class TopMenu {
 	}
 
 	public AccountsPage gotoAccounts() {
-		Page.driver.findElement(By.linkText("Accounts")).click();
+		Page.click("accountstab_linktext");
 
 		return new AccountsPage();
 
