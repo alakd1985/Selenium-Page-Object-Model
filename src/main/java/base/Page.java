@@ -17,11 +17,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utilities.ExcelReader;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Page {
 	public static WebDriver driver;
@@ -68,12 +68,13 @@ public class Page {
 				}
 
 				if (config.getProperty("browser").equals("firefox")) {
-					System.setProperty("webdriver.gecko.driver", "driver//geckodriver.exe");
+					WebDriverManager.firefoxdriver().setup();
+
 					driver = new FirefoxDriver();
 
 				}
 				if (config.getProperty("browser").equals("chrome")) {
-					System.setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\driver\\chromedriver.exe");
+					WebDriverManager.chromedriver().setup();
 
 					Map<String, Object> prefs = new HashMap<String, Object>();
 
@@ -93,9 +94,6 @@ public class Page {
 
 					driver = new ChromeDriver(options);
 					log.debug("chrome file loaded!!!");
-				} else if (config.getProperty("browser").equals("ie")) {
-					System.setProperty("webdriver.ie.driver", "driver//IEDriverServer.exe");
-					driver = new InternetExplorerDriver();
 				}
 
 				driver.get(config.getProperty("testsiteurl"));
